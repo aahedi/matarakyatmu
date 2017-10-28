@@ -1,1 +1,63 @@
-<!DOCTYPE html><html><head><title>Selamat Datang</title><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><style>html{margin:0;padding:0;width:100%;height:100%;font-family:Arial;overflow:hidden}.logo{text-align:center;position:fixed;width:100%;height:100%;top:-1px;left:-1px;background-size:200px 200px;background-image:url(icon512.png);background-repeat:no-repeat;background-position:center;z-index:999999}*{margin:0;padding:0}@-ms-viewport{width:device-width}body{overflow:hidden;-ms-user-select:none;-ms-content-zooming:none;-ms-touch-action:none;overflow:hidden}#clouds{padding:100px 0;background:#c9dbe9;background:-webkit-linear-gradient(top,#c9dbe9 0,#fff 100%);background:-linear-gradient(top,#c9dbe9 0,#fff 100%);background:-moz-linear-gradient(top,#c9dbe9 0,#fff 100%)}.cloud{width:200px;height:60px;background:#fff;border-radius:200px;-moz-border-radius:200px;-webkit-border-radius:200px;position:relative}.cloud:after,.cloud:before{content:'';position:absolute;background:#fff;width:100px;height:80px;position:absolute;top:-15px;left:10px;border-radius:100px;-moz-border-radius:100px;-webkit-border-radius:100px;-webkit-transform:rotate(30deg);transform:rotate(30deg);-moz-transform:rotate(30deg)}.cloud:after{width:120px;height:120px;top:-55px;left:auto;right:15px}.x1{-webkit-animation:moveclouds 5s linear infinite;-moz-animation:moveclouds 5s linear infinite;-o-animation:moveclouds 5s linear infinite}.x2{left:200px;-webkit-transform:scale(.6);-moz-transform:scale(.6);transform:scale(.6);opacity:.6;-webkit-animation:moveclouds 15s linear infinite;-moz-animation:moveclouds 15s linear infinite;-o-animation:moveclouds 15s linear infinite}.x3{left:-250px;top:-200px;-webkit-transform:scale(.8);-moz-transform:scale(.8);transform:scale(.8);opacity:.8;-webkit-animation:moveclouds 10s linear infinite;-moz-animation:moveclouds 10s linear infinite;-o-animation:moveclouds 10s linear infinite}.x4{left:470px;top:-250px;-webkit-transform:scale(.75);-moz-transform:scale(.75);transform:scale(.75);opacity:.75;-webkit-animation:moveclouds 8s linear infinite;-moz-animation:moveclouds 8s linear infinite;-o-animation:moveclouds 8s linear infinite}.x5{left:-150px;top:-150px;-webkit-transform:scale(.8);-moz-transform:scale(.8);transform:scale(.8);opacity:.8;-webkit-animation:moveclouds 10s linear infinite;-moz-animation:moveclouds 10s linear infinite;-o-animation:moveclouds 10s linear infinite}@-webkit-keyframes moveclouds{0%{margin-left:1000px}100%{margin-left:-1000px}}@-moz-keyframes moveclouds{0%{margin-left:1000px}100%{margin-left:-1000px}}@-o-keyframes moveclouds{0%{margin-left:1000px}100%{margin-left:-1000px}}</style><script src="cordova.js"></script><script>document.addEventListener("deviceready", masuk, false);function home(){if (localStorage.getItem("lokasi") === null){window.location.replace("home.html")}else{localStorage.setItem("lokasi2",localStorage.getItem("lokasi"));window.location.replace("home.html#"+localStorage.getItem("lokasi"))}}function masuk(){setTimeout(function(){home()},3e3)}</script><body onload=masuk() oncontextmenu=return!1 ondragstart=return!1><a href=javascript:home();><div id=clouds><div class=logo></div><div class="cloud x1"></div><div class="cloud x2"></div><div class="cloud x3"></div><div class="cloud x4"></div><div class="cloud x5"></div></div></a>
+<!DOCTYPE html>
+<html lang='id'>
+<head>
+<title>Toko Online</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<link rel="stylesheet" href="css/snap.css" />
+<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/menu.css" />
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="hedi.css" />
+<link rel="stylesheet" href="css/owl.carousel.css" />     
+<link rel="stylesheet" href="css/owl.theme.css" />
+<link rel="stylesheet" href="jquery-ui.css" />
+<link rel="stylesheet" href="icon/typicons-fontello.min.css" />
+<script src="jquery.min.js"></script>
+<script src="cordova.js"></script>
+<script src="function.js"></script>
+</head>
+<body>
+	<div id="layang">
+		<div id="logo"><img src="icon96.png" width="100" height="100"></div>
+		<div class="nama_app"><table width="100%" height="45px" border="0"><tr>
+		<td style="vertical-align:middle" align="left" valign="middle"><div id="nama_aplikasi"></div></td></tr></table></div>
+		<div id="logo_menu"><img src="image/pesan.png" class="icon_pesan" onclick="buka_pesan()"></div>
+	</div>
+
+		<div id="content" class="snap-content">
+		
+	<!--<table border="0" id="kotakcari" style="display:none;margin:90px 0 -50px 20px;">
+		<tr>
+			<td style="width:70%"><input type="text" style="width:90%" placeholder="Cari Produk" id="kata_kunci" ></td>
+			<td valign="middle" width="100">
+				<button style="padding:10px 5px 10px 5px" onclick="cari_produk_nya()">Cari Produk</button>
+			</td>
+		</tr>		
+
+	</table>-->
+	
+		<div id="isi">
+
+		</div>
+		</div>
+		<div class="snap-drawers">
+            <div id="menu_kiri" class="snap-drawer snap-drawer-left"></div>
+            <div id="menu_kanan" class="snap-drawer snap-drawer-right"></div>
+        </div>
+        <div id="navbawah">
+        <div id="marquee"><marquee behavior="scroll" direction="left" class="text_berjalan"></marquee></div>
+                <ul id="menu_tengah">
+                </ul>
+        </div>
+        <script src="js/base64.min.js"></script>
+		<script src="js/owl.carousel.js"></script>
+        <script src="js/snap.js"></script>
+        <script src="js/demo.js"></script>
+		<div id="loading"><div class="cssload-container"><div class="cssload-speeding-wheel"></div><div class="tengah"></div></div></div>
+
+<link rel="stylesheet" href="css/nav.css" />
+</body>
+</html>
